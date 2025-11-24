@@ -7,20 +7,106 @@
   </head>
   <body>
 
-<p align="center">
-  <a href="https://nomierinies.github.io/mckit/" target="_blank">
-    <img src="https://nomierinies.github.io/mckit/" alt="mckit" />
-  </a>
-  <a href="https://nomierinies.github.io/mckit/esp32partitionbuilder/" target="_blank">
-    <img src="https://nomierinies.github.io/mckit/esp32partitionbuilder/" alt="parttionbuilder" />
-  </a>
-  <a href="https://yourpersonalwebsite.com" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=wordpress&logoColor=white" alt="Portfolio" />
-  </a>
-  <a href="mailto:youremail@example.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</p>
+<style>
+  .gauge-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align links at the bottom */
+    width: 100%;
+    max-width: 500px; /* Max width for the gauge */
+    margin: 20px auto;
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .gauge-arc {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Size of the "gauge" arc */
+    height: 100px; /* Half height for a semi-circle */
+    border: 5px solid #ccc;
+    border-color: #ccc #ccc transparent transparent; /* Simulate arc */
+    border-radius: 0 0 100px 100px; /* Make it a semi-circle bottom */
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden; /* Hide excess border */
+  }
+
+  .gauge-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    z-index: 2; /* Ensure links are above the gauge background */
+    margin-top: 60px; /* Push links below the arc visually */
+  }
+
+  .gauge-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .gauge-link:hover {
+    transform: translateY(-5px);
+    color: #007bff;
+  }
+
+  .gauge-marker {
+    width: 15px;
+    height: 15px;
+    background-color: #007bff; /* Default marker color */
+    border-radius: 50%;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  /* Custom colors for each link's marker */
+  .gauge-link:nth-child(1) .gauge-marker { background-color: #28a745; } /* Green */
+  .gauge-link:nth-child(2) .gauge-marker { background-color: #ffc107; } /* Yellow */
+  .gauge-link:nth-child(3) .gauge-marker { background-color: #17a2b8; } /* Cyan */
+  .gauge-link:nth-child(4) .gauge-marker { background-color: #dc3545; } /* Red */
+
+  .gauge-label {
+    font-size: 0.9em;
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+</style>
+
+<div class="gauge-container">
+  <div class="gauge-arc"></div>
+  <div class="gauge-links">
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="gauge-link">
+      <div class="gauge-marker"></div>
+      <span class="gauge-label">LinkedIn</span>
+    </a>
+    <a href="https://github.com/yourusername" target="_blank" class="gauge-link">
+      <div class="gauge-marker"></div>
+      <span class="gauge-label">GitHub</span>
+    </a>
+    <a href="https://yourpersonalwebsite.com" target="_blank" class="gauge-link">
+      <div class="gauge-marker"></div>
+      <span class="gauge-label">Portfolio</span>
+    </a>
+    <a href="mailto:youremail@example.com" class="gauge-link">
+      <div class="gauge-marker"></div>
+      <span class="gauge-label">Email</span>
+    </a>
+  </div>
+</div>
     
   </body>
 </html>
