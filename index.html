@@ -4,62 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Image with Indicators</title>
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh; /* Minimum height to fill the viewport */
-        background-color: #f0f0f0; /* For better visibility */
-      }
-
-      .image-container {
-        position: relative;
-        display: inline-block;
-        max-width: 100%; /* Ensure container doesn't overflow */
-        max-height: 100vh; /* Max height to fit in viewport */
-        overflow: hidden; /* Hide any overflow */
-      }
-
-      .image-container img {
-        max-width: 100%; /* Max width to fit in container */
-        max-height: 100vh; /* Max height to fit in viewport */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Remove any default inline spacing */
-      }
-
-      .indicator {
-        position: absolute;
-        background-color: lightgreen;
-        width: 1vw;
-        height: 1vw;
-        border-radius: 50%;
-        padding: 5px;
-        padding: 5px;
-        transform: translate(-50%, -50%);
-      }
-      .centered-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #f9f5f5; /* Text color */
-        font-size: 1vw; /* Responsive font size */
-        text-align: center;
-        background-color: rgba(8, 145, 213, 0.9); /* Blue background with 90% opacity */
-        padding: 10px; /* Padding around the text */
-        border-radius: px; /* Rounded corners */
-        border: 5px solid darkblue; /* Red border */
-        font-weight: bold;
-        font-family: Arial, sans-serif; /* Arial font */
-      }
-    </style>
   </head>
   <body>
-    <div class="image-container">
+
 <p align="center">
   <a href="https://nomierinies.github.io/mckit/" target="_blank">
     <img src="https://nomierinies.github.io/mckit/" alt="mckit" />
@@ -73,7 +20,7 @@
   <a href="mailto:youremail@example.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-</p>    
-    </div>
+</p>
+    
   </body>
 </html>
